@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Addition of Two numbers</title>
+</head>
+<style>
+   body{
+        background-image: url('backgroundnimalen.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: arial;
+        margin: 0;
+        padding: 0;
+    }
+
+    .add{
+        margin-top: 50px;
+        font-size: 96px;
+        font-weight: bold;
+        text-align: center;
+        color: rgb(2, 2, 2);;
+
+    }
+
+    .container{
+        text-align: left;
+        justify-content: center;
+        align-items:center;
+        font-family: arial;
+        padding: 20px;
+        background-color: rgba(9, 52, 6, 0.575);
+        transform:translateX(75%);
+        margin-bottom: 50px;
+        border: none;
+        border-radius: 15px;
+        height: auto;
+        width: 500px;
+
+        }
+
+        label{
+        color: white;
+        }
+
+        input[type="number"]{
+        background-color: white; 
+        border: solid 1px black;
+        padding: 15px;
+        margin: 15px;
+        border-radius: 5px;
+        font-size: 16px;
+        color: black;
+        }
+
+        p.result{
+        font-size: 17px;
+        text-decoration: none;
+        color: white;
+        }
+
+        button.check{
+        padding: 10px 20px;
+        background-color: #1fd00f; 
+        color: white;
+        margin-right: 15px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        }
+
+        button.check:hover {
+        background-color: #04300b; 
+    
+        }
+
+        button.reset{
+        padding: 10px 20px;
+        background-color: #f8004a; 
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+
+        }
+
+        button.reset:hover {
+        background-color: rgb(255, 50, 95);
+        }
+
+        .back{
+
+        text-align: center;
+        border:none;
+        background-color: transparent;
+        font-size: 14px;
+        padding: 5px;
+        margin-right: 25px;
+        cursor: pointer;
+        color: white; 
+
+        }
+
+        .back:hover{
+        color: #fffb00a4;
+        }
+
+    
+</style>
+
+<div class="top-box">
+    <p class="add">Addition of Two Numbers</p>
+</div>
+
+<div class="container">
+    <label for="num1">Enter First number</label><br /><br />
+    <input type="number" id="num1" /><br /><br />
+
+    <label for="num2">Enter Second number</label><br /><br />
+    <input type="number" id="num2" /><br /><br />
+
+    <p class="result">The sum is: <span id="result"></span></p>
+
+    <button class="check" onclick="addTwoNumbers()">COMPUTE</button><br /><br />
+    <button class="reset" onclick="resetInputs()">RESET</button><br /><br />
+    <button class="back" onclick="goToHome()">Go to Home</button>
+
+</div>
+
+<script>
+    function goToHome() {
+        window.location.href = "index.html"
+    }
+
+    function addTwoNumbers() {
+        var A = parseFloat(document.getElementById('num1').value);
+        var B = parseFloat(document.getElementById('num2').value);
+        var result = A + B;
+        document.getElementById("result").innerHTML = ' ' + result + ' ';
+    }
+
+    function resetInputs() {
+        document.getElementById('num1').value = '';
+        document.getElementById('num2').value = '';
+        document.getElementById('result').innerHTML = '';
+    }
+
+</script>
+
+
+
+
+</body>
+
+</html>
